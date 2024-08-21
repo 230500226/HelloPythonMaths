@@ -1,6 +1,7 @@
 import numpy as np
 from scipy.fft import fft
 import matplotlib.pyplot as plt
+// sympy
 
 # Function to evaluate the user-defined function
 def evaluate_function(func_str, x_values):
