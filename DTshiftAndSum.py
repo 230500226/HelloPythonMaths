@@ -1,18 +1,20 @@
-# Define the discrete function
+# Define the discrete function with user input
+def get_user_defined_discrete_function():
+    values = {}
+    start_index = int(input("Enter the start index of the discrete function: "))
+    end_index = int(input("Enter the end index of the discrete function: "))
+    
+    for i in range(start_index, end_index + 1):
+        value = int(input(f"Enter the value for index {i}: "))
+        values[i] = value
+    
+    return values
+
+# Get user-defined values
+user_defined_values = get_user_defined_discrete_function()
+
 def discrete_function(x):
-    values = {
-        -4: 0,
-        -3: -1,
-        -2: -1,
-        -1: -1,
-        0: 2,
-        1: 3,
-        2: 3,
-        3: 2,
-        4: 1,
-        5: 0
-    }
-    return values.get(x, 0)  # Return 0 if x is not in the dictionary
+    return user_defined_values.get(x, 0)  # Return 0 if x is not in the dictionary
 
 # Create the array
 x_values = [-4, -3, -2, -1, 0, 1, 2, 3, 4, 5]
